@@ -636,7 +636,6 @@ export default function App() {
                   }}>{f === null ? "Все" : `🔴🟡🟢`[f - 1] + ` Приоритет ${f}`}</button>
                 ))}
               </div>
-              </div>
               {ARCHIVE_PLAN.filter(a => archiveFilter === null || a.priority === archiveFilter).map((a, i) => (
                 <div key={i} style={{ background: PALETTE.bgCard, border: `1px solid ${PALETTE.border}`, borderRadius: 10, padding: "14px 18px", marginBottom: 12 }}>
                   <div style={{ fontSize: 14, fontWeight: 600, color: PALETTE.ink, marginBottom: 4 }}>{a.name}</div>

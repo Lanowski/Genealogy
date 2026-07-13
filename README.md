@@ -2,7 +2,7 @@
 
 Генеалогический исследовательский проект семьи Грязнухиных с интерактивной визуализацией
 
-**🌐 Live Demo:** [Открыть приложение](https://probable-halibut-jp5vrw9rqqv2pp9w-3000.app.github.dev)
+**🌐 Live Demo:** [Открыть приложение](https://lanowski.github.io/Genealogy)
 
 ## Особенности
 

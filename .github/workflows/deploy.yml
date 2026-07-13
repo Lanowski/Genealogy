@@ -34,4 +34,5 @@ jobs:
           git config user.email "deploy@bot.com"
           git add .
           git commit -m "Deploy from GitHub Actions"
+          git branch -M main
           git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Lanowski/Genealogy.git main:gh-pages

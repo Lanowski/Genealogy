@@ -7,10 +7,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
 
     steps:
       - uses: actions/checkout@v4
@@ -30,11 +26,12 @@ jobs:
       - name: Create .nojekyll
         run: touch dist/.nojekyll
       
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'dist'
-      
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v3
+      - name: Deploy
+        run: |
+          cd dist
+          git init
+          git config user.name "Deploy Bot"
+          git config user.email "deploy@bot.com"
+          git add .
+          git commit -m "Deploy from GitHub Actions"
+          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Lanowski/Genealogy.git main:gh-pages
